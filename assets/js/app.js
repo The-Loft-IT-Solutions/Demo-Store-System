@@ -1,5 +1,5 @@
 /**
- * StoresAPI Web Demo - Main Application
+ * ShopHub Web Demo - Main Application
  */
 
 class App {
@@ -29,7 +29,7 @@ class App {
       <div class="login-card">
         <div class="logo">
           <div class="logo-icon">S</div>
-          <h2>StoresAPI</h2>
+          <h2>ShopHub</h2>
           <p class="subtitle">Web Demo</p>
         </div>
 
@@ -123,7 +123,7 @@ class App {
       <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
           <div class="logo">S</div>
-          <h1>StoresAPI</h1>
+          <h1>ShopHub</h1>
         </div>
         <nav class="sidebar-nav" id="sidebarNav"></nav>
         <div class="sidebar-footer">
