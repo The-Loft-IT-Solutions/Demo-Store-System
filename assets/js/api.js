@@ -1,5 +1,5 @@
 /**
- * StoresAPI Web Demo - Demo API Layer
+ * ShopHub Web Demo - Demo API Layer
  * Simulates all API endpoints using local JSON data (embedded inline)
  */
 

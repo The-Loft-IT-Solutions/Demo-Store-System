@@ -170,20 +170,20 @@ class App {
     const nav = document.getElementById('sidebarNav');
 
     const commonItems = [
-      { id: 'dashboard', label: 'Dashboard', icon: '📊' },
-      { id: 'stores', label: 'Stores', icon: '🏪' },
-      { id: 'categories', label: 'Categories', icon: '📁' },
-      { id: 'products', label: 'Products', icon: '📦' },
-      { id: 'sales', label: 'Sales', icon: '💰' }
+      { id: 'dashboard', label: 'Dashboard', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>' },
+      { id: 'stores', label: 'Stores', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m4-4h1m-1 4h1"/></svg>' },
+      { id: 'categories', label: 'Categories', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>' },
+      { id: 'products', label: 'Products', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>' },
+      { id: 'sales', label: 'Sales', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>' }
     ];
 
     const adminItems = [
-      { id: 'admins', label: 'Admins', icon: '👤' },
-      { id: 'owners', label: 'Owners', icon: '👔' }
+      { id: 'admins', label: 'Admins', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>' },
+      { id: 'owners', label: 'Owners', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' }
     ];
 
     const ownerItems = [
-      { id: 'profile', label: 'My Profile', icon: '⚙️' }
+      { id: 'profile', label: 'My Profile', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>' }
     ];
 
     let items = [...commonItems];
@@ -251,14 +251,14 @@ class App {
     container.innerHTML = `
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-icon blue">🏪</div>
+          <div class="stat-icon blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m4-4h1m-1 4h1"/></svg></div>
           <div class="stat-info">
             <h3>${stats.totalStores}</h3>
             <p>Total Stores</p>
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon green">📦</div>
+          <div class="stat-icon green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
           <div class="stat-info">
             <h3>${stats.totalProducts}</h3>
             <p>Products</p>
@@ -268,14 +268,14 @@ class App {
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon purple">📁</div>
+          <div class="stat-icon purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
           <div class="stat-info">
             <h3>${stats.totalCategories}</h3>
             <p>Categories</p>
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon orange">💰</div>
+          <div class="stat-icon orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <div class="stat-info">
             <h3>${formatCurrency(stats.totalSales)}</h3>
             <p>Total Sales</p>
@@ -283,14 +283,14 @@ class App {
         </div>
         ${isAdmin ? `
         <div class="stat-card">
-          <div class="stat-icon cyan">👔</div>
+          <div class="stat-icon cyan"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <div class="stat-info">
             <h3>${stats.totalOwners}</h3>
             <p>Active Owners</p>
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon red">👤</div>
+          <div class="stat-icon red"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg></div>
           <div class="stat-info">
             <h3>${stats.totalAdmins}</h3>
             <p>Admins</p>
@@ -343,7 +343,7 @@ class App {
     container.innerHTML = `
       <div class="filter-bar">
         <div class="search-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
           <input type="text" id="storeSearch" placeholder="Search stores..." 
             oninput="app.filterStores(this.value)">
         </div>
@@ -356,7 +356,7 @@ class App {
 
       ${stores.length === 0 ? `
         <div class="empty-state">
-          <div class="icon">🏪</div>
+          <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m4-4h1m-1 4h1"/></svg></div>
           <h3>No stores found</h3>
           <p>Get started by adding your first store.</p>
         </div>
@@ -374,7 +374,7 @@ class App {
           <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:0.5rem;">
             <div>
               <div class="item-card-title">${store.store_name}</div>
-              <div class="item-card-subtitle">📍 ${store.location}</div>
+              <div class="item-card-subtitle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-1px;margin-right:3px;"><path d="M20.9 10.6c0 6.4-8.9 12.9-8.9 12.9s-8.9-6.5-8.9-12.9a8.9 8.9 0 0 1 17.8 0z"/><circle cx="12" cy="10.6" r="3"/></svg>${store.location}</div>
             </div>
             <span class="badge ${store.status ? 'badge-success' : 'badge-danger'}">
               ${store.status ? 'Active' : 'Inactive'}
@@ -496,8 +496,8 @@ class App {
               style="width:100%;height:200px;object-fit:cover;border-radius:var(--radius);margin-bottom:1rem;"
               onerror="this.src='${getImagePlaceholder(store.store_name)}'">
             <h2 style="font-size:1.5rem;margin-bottom:0.5rem;">${store.store_name}</h2>
-            <p class="text-muted mb-1">📍 ${store.location}</p>
-            <p class="text-muted mb-2">👤 Owner: ${store.owner?.first_name} ${store.owner?.last_name}</p>
+            <p class="text-muted mb-1"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-2px;margin-right:4px;"><path d="M20.9 10.6c0 6.4-8.9 12.9-8.9 12.9s-8.9-6.5-8.9-12.9a8.9 8.9 0 0 1 17.8 0z"/><circle cx="12" cy="10.6" r="3"/></svg>${store.location}</p>
+            <p class="text-muted mb-2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-2px;margin-right:4px;"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>Owner: ${store.owner?.first_name} ${store.owner?.last_name}</p>
             <span class="badge ${store.status ? 'badge-success' : 'badge-danger'}">
               ${store.status ? 'Active' : 'Inactive'}
             </span>
@@ -558,7 +558,7 @@ class App {
     container.innerHTML = `
       <div class="filter-bar">
         <div class="search-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
           <input type="text" placeholder="Search categories..." 
             oninput="app.filterCategories(this.value)">
         </div>
@@ -571,7 +571,7 @@ class App {
 
       ${categories.length === 0 ? `
         <div class="empty-state">
-          <div class="icon">📁</div>
+          <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
           <h3>No categories found</h3>
         </div>
       ` : ''}
@@ -586,7 +586,7 @@ class App {
           onerror="this.src='${getImagePlaceholder(cat.category_name)}'">
         <div class="item-card-body">
           <div class="item-card-title">${cat.category_name}</div>
-          <div class="item-card-subtitle">🏪 ${cat.store?.store_name || 'N/A'}</div>
+          <div class="item-card-subtitle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-1px;margin-right:3px;"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m-1 4h1m4-4h1m-1 4h1"/></svg>${cat.store?.store_name || 'N/A'}</div>
           <span class="badge ${cat.status ? 'badge-success' : 'badge-danger'}">
             ${cat.status ? 'Active' : 'Inactive'}
           </span>
@@ -709,7 +709,7 @@ class App {
     container.innerHTML = `
       <div class="filter-bar">
         <div class="search-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
           <input type="text" placeholder="Search products..." 
             oninput="app.filterProducts(this.value)">
         </div>
@@ -722,7 +722,7 @@ class App {
 
       ${products.length === 0 ? `
         <div class="empty-state">
-          <div class="icon">📦</div>
+          <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
           <h3>No products found</h3>
         </div>
       ` : ''}
@@ -738,11 +738,11 @@ class App {
           onerror="this.src='${getImagePlaceholder(product.product_name)}'">
         <div class="item-card-body">
           <div class="item-card-title">${product.product_name}</div>
-          <div class="item-card-subtitle">📁 ${product.category?.category_name || 'N/A'}</div>
+          <div class="item-card-subtitle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-1px;margin-right:3px;"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>${product.category?.category_name || 'N/A'}</div>
           <div class="item-card-meta">
             <span class="item-card-price">${formatCurrency(product.price)}</span>
             <span class="item-card-stock ${lowStock ? 'text-danger' : ''}">
-              ${lowStock ? '⚠️' : ''} Stock: ${product.stock_level}
+              ${lowStock ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-1px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>' : ''} Stock: ${product.stock_level}
             </span>
           </div>
           <span class="badge ${product.status ? 'badge-success' : 'badge-danger'}" style="margin-top:0.5rem;">
@@ -879,7 +879,7 @@ class App {
     container.innerHTML = `
       <div class="filter-bar">
         <div class="search-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
           <input type="text" placeholder="Search sales..." 
             oninput="app.filterSales(this.value)">
         </div>
@@ -910,7 +910,7 @@ class App {
 
       ${sales.length === 0 ? `
         <div class="empty-state">
-          <div class="icon">💰</div>
+          <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <h3>No sales yet</h3>
           <p>Create your first sale to get started.</p>
         </div>
@@ -1059,7 +1059,7 @@ class App {
     container.innerHTML = `
       <div class="filter-bar">
         <div class="search-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
           <input type="text" placeholder="Search admins..." 
             oninput="app.filterAdmins(this.value)">
         </div>
@@ -1223,7 +1223,7 @@ class App {
     container.innerHTML = `
       <div class="filter-bar">
         <div class="search-box">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
           <input type="text" placeholder="Search owners..." 
             oninput="app.filterOwners(this.value)">
         </div>
