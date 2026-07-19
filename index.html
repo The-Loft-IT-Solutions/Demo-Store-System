@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoresAPI - Web Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- App will be rendered here by JavaScript -->
+
+  <script>
+    function dcwEnterStore(role){
+      document.getElementById('dcwNavigator').remove();
+      try{ window.dcwPreferredRole = role; }catch(e){}
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      // Injected AFTER app.js's synchronous render so it isn't wiped by
+      // showLogin()/showDashboard()'s document.body.innerHTML reset.
+      var nav = document.createElement('div');
+      nav.id = 'dcwNavigator';
+      nav.style.cssText = 'position:fixed;inset:0;background:linear-gradient(160deg,#111827,#1F2937);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;color:#fff;font-family:\'Inter\',sans-serif;';
+      nav.innerHTML = '<div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#60A5FA;margin-bottom:10px;">Interactive Demo</div>' +
+        '<h1 style="font-size:34px;font-weight:700;margin-bottom:8px;text-align:center;">StoresAPI &mdash; Multi-Store Management</h1>' +
+        '<p style="color:#D1D5DB;margin-bottom:36px;text-align:center;max-width:560px;">A back-office system for managing multiple stores, categories, products, and sales &mdash; with different access levels for store owners and platform admins. Choose a role to begin.</p>' +
+        '<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:700px;">' +
+        '<div onclick="dcwEnterStore(\'owner\')" style="background:#fff;color:#111827;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor=\'#60A5FA\'" onmouseout="this.style.borderColor=\'transparent\'">' +
+        '<h3 style="font-size:18px;margin-bottom:8px;color:#2563EB;">&#127970; Store Owner</h3>' +
+        '<p style="font-size:13.5px;color:#6B7280;">Manage your own store(s): categories, products, stock levels, and sales records.</p></div>' +
+        '<div onclick="dcwEnterStore(\'admin\')" style="background:#fff;color:#111827;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor=\'#60A5FA\'" onmouseout="this.style.borderColor=\'transparent\'">' +
+        '<h3 style="font-size:18px;margin-bottom:8px;color:#2563EB;">&#128737; Platform Admin</h3>' +
+        '<p style="font-size:13.5px;color:#6B7280;">Oversee every store on the platform: verify owners, monitor activity across all accounts.</p></div>' +
+        '</div>' +
+        '<div style="margin-top:26px;font-size:12.5px;color:#9CA3AF;text-align:center;">Demo credentials are pre-filled &mdash; just click Sign In on the next screen.</div>';
+      document.body.appendChild(nav);
+
+      // If a session is already active (returning to dashboard), skip the navigator.
+      try{ if (api.getSession()) nav.remove(); }catch(e){}
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var badge = document.createElement('div');
+      badge.id = 'dcwPoweredBy';
+      badge.style.cssText = 'position:fixed;bottom:18px;right:18px;z-index:1000;background:rgba(15,23,42,0.75);color:#f1f5f9;font-size:11.5px;padding:7px 12px;border-radius:20px;letter-spacing:.2px;font-family:inherit;';
+      badge.innerHTML = 'Powered by <a href="https://theloftitsolutions.com" target="_blank" rel="noopener" style="color:#f1f5f9;">The Loft IT Solutions</a>';
+      document.body.appendChild(badge);
+    });
+  </script>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

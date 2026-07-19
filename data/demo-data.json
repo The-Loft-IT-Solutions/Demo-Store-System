@@ -1,0 +1,221 @@
+{
+  "admins": [
+    {
+      "id": "52fbe1be-07b5-4bfa-bfa4-6403ec8fc173",
+      "first_name": "Sample",
+      "last_name": "Admin 1",
+      "email": "admin1@yourbrand.com",
+      "is_verified": true,
+      "created_at": "2024-01-15T08:30:00Z",
+      "updated_at": "2024-03-20T10:15:00Z"
+    },
+    {
+      "id": "c8c35a21-5eb7-4aec-87f9-d9741767b86a",
+      "first_name": "Sample",
+      "last_name": "Admin 2",
+      "email": "admin2@yourbrand.com",
+      "is_verified": true,
+      "created_at": "2024-02-10T14:20:00Z",
+      "updated_at": "2024-04-05T09:45:00Z"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "first_name": "Sample",
+      "last_name": "Admin 3",
+      "email": "admin3@yourbrand.com",
+      "is_verified": false,
+      "created_at": "2024-05-01T11:00:00Z",
+      "updated_at": "2024-05-01T11:00:00Z"
+    }
+  ],
+  "owners": [
+    {
+      "id": "109b1da1-7e3c-4cca-8f41-85bc735ceef8",
+      "first_name": "Sample",
+      "last_name": "Owner 1",
+      "email": "owner1@store.com",
+      "image": "",
+      "is_active": true,
+      "created_at": "2024-01-20T09:00:00Z"
+    },
+    {
+      "id": "cab26453-3377-4992-93db-b583f209786c",
+      "first_name": "Sample",
+      "last_name": "Owner 2",
+      "email": "owner2@store.com",
+      "image": "",
+      "is_active": true,
+      "created_at": "2024-02-15T13:30:00Z"
+    },
+    {
+      "id": "d4e5f6a7-b8c9-0123-d456-e7890f123456",
+      "first_name": "Sample",
+      "last_name": "Owner 3",
+      "email": "owner3@store.com",
+      "image": "",
+      "is_active": false,
+      "created_at": "2024-03-10T16:45:00Z"
+    }
+  ],
+  "stores": [
+    {
+      "id": "53ccaede-d1f1-4247-9eb0-41ed9f31b914",
+      "owner_id": "109b1da1-7e3c-4cca-8f41-85bc735ceef8",
+      "store_name": "Store A",
+      "location": "Sample City, Sample Province",
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400",
+      "created_at": "2024-01-25T10:00:00Z"
+    },
+    {
+      "id": "f1e2a876-c239-4df7-8cf6-d09ba007f194",
+      "owner_id": "109b1da1-7e3c-4cca-8f41-85bc735ceef8",
+      "store_name": "Store B",
+      "location": "Sample City, Sample Province",
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400",
+      "created_at": "2024-02-05T14:30:00Z"
+    },
+    {
+      "id": "fb683008-14ef-4c61-b4f7-31b2b97a2d47",
+      "owner_id": "cab26453-3377-4992-93db-b583f209786c",
+      "store_name": "Store C",
+      "location": "Sample City, Metro Manila",
+      "status": false,
+      "image": "https://images.unsplash.com/photo-1550009158-9ebf690569ba?w=400",
+      "created_at": "2024-03-01T11:15:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "6a325cc7-3153-4e7f-8f9d-2a7bd5328539",
+      "store_id": "53ccaede-d1f1-4247-9eb0-41ed9f31b914",
+      "category_name": "Electronics",
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1498049860654-af1a5c5668ba?w=400",
+      "created_at": "2024-01-26T09:00:00Z"
+    },
+    {
+      "id": "29938546-7f00-4417-a9cf-8668463b1096",
+      "store_id": "53ccaede-d1f1-4247-9eb0-41ed9f31b914",
+      "category_name": "Groceries",
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400",
+      "created_at": "2024-01-27T10:30:00Z"
+    },
+    {
+      "id": "d6177ee4-f48b-4d54-a19f-e158ec61021a",
+      "store_id": "f1e2a876-c239-4df7-8cf6-d09ba007f194",
+      "category_name": "Household Items",
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400",
+      "created_at": "2024-02-06T08:00:00Z"
+    },
+    {
+      "id": "e8f9a0b1-c2d3-4567-e890-f12345678901",
+      "store_id": "fb683008-14ef-4c61-b4f7-31b2b97a2d47",
+      "category_name": "Gadgets",
+      "status": false,
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400",
+      "created_at": "2024-03-02T12:00:00Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "53987212-cd39-4a06-8e52-cf8a8fa8ca68",
+      "category_id": "6a325cc7-3153-4e7f-8f9d-2a7bd5328539",
+      "product_name": "Wireless Earbuds",
+      "stock_level": 45,
+      "price": 1299.99,
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400",
+      "created_at": "2024-01-28T11:00:00Z"
+    },
+    {
+      "id": "9934adad-18b0-4246-81b1-2f2efa3283b7",
+      "category_id": "6a325cc7-3153-4e7f-8f9d-2a7bd5328539",
+      "product_name": "Bluetooth Speaker",
+      "stock_level": 28,
+      "price": 899.5,
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
+      "created_at": "2024-01-29T13:30:00Z"
+    },
+    {
+      "id": "489f633b-a6d5-4a37-8d1f-8c3bd8d90ad7",
+      "category_id": "29938546-7f00-4417-a9cf-8668463b1096",
+      "product_name": "Organic Rice (5kg)",
+      "stock_level": 120,
+      "price": 250.0,
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400",
+      "created_at": "2024-01-30T09:15:00Z"
+    },
+    {
+      "id": "b2aa2ba1-2bfd-4bed-86e4-defdf1a8b519",
+      "category_id": "29938546-7f00-4417-a9cf-8668463b1096",
+      "product_name": "Canned Sardines (Pack of 6)",
+      "stock_level": 200,
+      "price": 180.0,
+      "status": false,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
+      "created_at": "2024-02-01T10:00:00Z"
+    },
+    {
+      "id": "c3d4e5f6-a7b8-9012-c345-d6789e012345",
+      "category_id": "d6177ee4-f48b-4d54-a19f-e158ec61021a",
+      "product_name": "Dishwashing Liquid (1L)",
+      "stock_level": 75,
+      "price": 95.0,
+      "status": true,
+      "image": "https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=400",
+      "created_at": "2024-02-07T14:00:00Z"
+    }
+  ],
+  "sales": [
+    {
+      "id": "e9f9b0b4-809b-4023-95a4-87dee27dab33",
+      "store_id": "53ccaede-d1f1-4247-9eb0-41ed9f31b914",
+      "items": [
+        {
+          "product_id": "53987212-cd39-4a06-8e52-cf8a8fa8ca68",
+          "quantity": 2,
+          "unit_price": 1299.99
+        },
+        {
+          "product_id": "9934adad-18b0-4246-81b1-2f2efa3283b7",
+          "quantity": 1,
+          "unit_price": 899.5
+        }
+      ],
+      "total_amount": 3499.48,
+      "created_at": "2024-03-15T14:30:00Z"
+    },
+    {
+      "id": "f0a1b2c3-d4e5-6789-f012-345678901234",
+      "store_id": "53ccaede-d1f1-4247-9eb0-41ed9f31b914",
+      "items": [
+        {
+          "product_id": "489f633b-a6d5-4a37-8d1f-8c3bd8d90ad7",
+          "quantity": 3,
+          "unit_price": 250.0
+        }
+      ],
+      "total_amount": 750.0,
+      "created_at": "2024-03-16T10:15:00Z"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567891",
+      "store_id": "f1e2a876-c239-4df7-8cf6-d09ba007f194",
+      "items": [
+        {
+          "product_id": "c3d4e5f6-a7b8-9012-c345-d6789e012345",
+          "quantity": 5,
+          "unit_price": 95.0
+        }
+      ],
+      "total_amount": 475.0,
+      "created_at": "2024-03-17T16:45:00Z"
+    }
+  ]
+}
