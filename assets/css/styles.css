@@ -1,12 +1,14 @@
+/* DEMO IDENTITY (Oct 2026): crimson #B42318 (dark #912018) + charcoal #344054 on light gray;
+   Barlow Semi Condensed (headings) + Barlow (body). Replaced an indigo/cyan + Inter set that read close to The Loft's blues. */
 /* ============================================
    StoresAPI Web Demo - Main Stylesheet
    ============================================ */
 
 :root {
-  --primary: #4f46e5;
-  --primary-dark: #4338ca;
-  --primary-light: #e0e7ff;
-  --secondary: #06b6d4;
+  --primary: #b42318;
+  --primary-dark: #912018;
+  --primary-light: #fee4e2;
+  --secondary: #344054;
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
@@ -35,7 +37,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--gray-50);
   color: var(--gray-800);
   line-height: 1.6;
@@ -410,7 +412,7 @@ tr:last-child td {
   background: #dbeafe;
   color: #1e40af;
 }
-.badge-info::before { background: #3b82f6; }
+.badge-info::before { background: #d92d20; }
 
 /* Buttons */
 .btn {
@@ -1109,3 +1111,7 @@ select:disabled {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gray-400);
 }
+
+
+/* Display font for headings */
+h1, h2, h3, h4 { font-family: 'Barlow Semi Condensed', 'Barlow', sans-serif; }

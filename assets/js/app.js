@@ -1,5 +1,5 @@
 /**
- * ShopHub Web Demo - Main Application
+ * Store System Web Demo - Main Application
  */
 
 class App {
@@ -29,7 +29,7 @@ class App {
       <div class="login-card">
         <div class="logo">
           <div class="logo-icon">S</div>
-          <h2>ShopHub</h2>
+          <h2>Store System</h2>
           <p class="subtitle">Web Demo</p>
         </div>
 
@@ -42,7 +42,7 @@ class App {
           <div class="form-group">
             <label>Email</label>
             <input type="email" id="loginEmail" placeholder="Enter email" required 
-              value="owner1@store.com">
+              value="owner1@companya.example">
           </div>
           <div class="form-group">
             <label>Password</label>
@@ -66,7 +66,7 @@ class App {
     let selectedRole = (typeof window.dcwPreferredRole === 'string') ? window.dcwPreferredRole : 'owner';
     if (selectedRole !== 'owner') {
       loginPage.querySelectorAll('.role-tab').forEach(t => t.classList.toggle('active', t.dataset.role === selectedRole));
-      document.getElementById('loginEmail').value = selectedRole === 'admin' ? 'admin1@yourbrand.com' : 'owner1@store.com';
+      document.getElementById('loginEmail').value = selectedRole === 'admin' ? 'admin1@companya.example' : 'owner1@companya.example';
     }
     loginPage.querySelectorAll('.role-tab').forEach(tab => {
       tab.addEventListener('click', () => {
@@ -77,9 +77,9 @@ class App {
         // Update demo email
         const emailInput = document.getElementById('loginEmail');
         if (selectedRole === 'owner') {
-          emailInput.value = 'owner1@store.com';
+          emailInput.value = 'owner1@companya.example';
         } else {
-          emailInput.value = 'admin1@yourbrand.com';
+          emailInput.value = 'admin1@companya.example';
         }
       });
     });
@@ -123,7 +123,7 @@ class App {
       <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
           <div class="logo">S</div>
-          <h1>ShopHub</h1>
+          <h1>Store System</h1>
         </div>
         <nav class="sidebar-nav" id="sidebarNav"></nav>
         <div class="sidebar-footer">

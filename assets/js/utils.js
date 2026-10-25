@@ -1,5 +1,5 @@
 /**
- * ShopHub Web Demo - Utilities
+ * Store System Web Demo - Utilities
  */
 
 // Format currency
@@ -227,7 +227,13 @@ const Storage = {
 
 // Image placeholder
 function getImagePlaceholder(text) {
-  return `https://placehold.co/400x300/4f46e5/ffffff?text=${encodeURIComponent(text)}`;
+  // Local SVG placeholder: no external image service (Demo Standard 2.3), works offline.
+  const label = String(text || '').replace(/[&<>"']/g, '');
+  const svg = "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>" +
+    "<rect width='100%' height='100%' fill='#b42318'/>" +
+    "<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Barlow, sans-serif' font-size='28' fill='#ffffff'>" +
+    label + "</text></svg>";
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
 }
 
 // Export for global use

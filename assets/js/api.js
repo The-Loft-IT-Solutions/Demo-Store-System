@@ -1,5 +1,5 @@
 /**
- * ShopHub Web Demo - Demo API Layer
+ * Store System Web Demo - Demo API Layer
  * Simulates all API endpoints using local JSON data (embedded inline)
  */
 
@@ -9,7 +9,7 @@ const DEMO_DATA = {
       "id": "52fbe1be-07b5-4bfa-bfa4-6403ec8fc173",
       "first_name": "Sample",
       "last_name": "Admin 1",
-      "email": "admin1@yourbrand.com",
+      "email": "admin1@companya.example",
       "is_verified": true,
       "created_at": "2024-01-15T08:30:00Z",
       "updated_at": "2024-03-20T10:15:00Z"
@@ -18,7 +18,7 @@ const DEMO_DATA = {
       "id": "c8c35a21-5eb7-4aec-87f9-d9741767b86a",
       "first_name": "Sample",
       "last_name": "Admin 2",
-      "email": "admin2@yourbrand.com",
+      "email": "admin2@companya.example",
       "is_verified": true,
       "created_at": "2024-02-10T14:20:00Z",
       "updated_at": "2024-04-05T09:45:00Z"
@@ -27,7 +27,7 @@ const DEMO_DATA = {
       "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
       "first_name": "Sample",
       "last_name": "Admin 3",
-      "email": "admin3@yourbrand.com",
+      "email": "admin3@companya.example",
       "is_verified": false,
       "created_at": "2024-05-01T11:00:00Z",
       "updated_at": "2024-05-01T11:00:00Z"
@@ -38,7 +38,7 @@ const DEMO_DATA = {
       "id": "109b1da1-7e3c-4cca-8f41-85bc735ceef8",
       "first_name": "Sample",
       "last_name": "Owner 1",
-      "email": "owner1@store.com",
+      "email": "owner1@companya.example",
       "image": "",
       "is_active": true,
       "created_at": "2024-01-20T09:00:00Z"
